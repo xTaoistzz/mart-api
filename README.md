@@ -43,10 +43,11 @@ Mart API คือ RESTful API ที่ใช้สำหรับจัดก�
 ## 📌 API Endpoints
 
 ### 🔑 Auth (`/api/v1`)
-| Method | Endpoint     | Description       |
-|--------|--------------|-------------------|
-| POST   | `/register`  | สมัครสมาชิก       |
-| POST   | `/login`     | เข้าสู่ระบบ        |
+| Method | Endpoint                 | Description      |
+|--------|--------------------------|-----------------|
+| POST   | `/register`              | สมัครสมาชิก      |
+| POST   | `/login`                 | เข้าสู่ระบบ        |
+| PUT    | `/users/:id/approve`     | เข้าสู่ระบบ        |
 
 > **Note:** ต้องตรวจสอบว่า `authRouter` ครอบคลุม endpoint เหล่านี้
 
@@ -77,7 +78,7 @@ Authorization: Bearer <your_jwt_token>
 ## 🧪 Example cURL
 
 ```bash
-curl -X POST http://localhost:3000/api/v1/login   -H "Content-Type: application/json"   -d '{"username": "user", "password": "pass"}'
+curl -X POST http://localhost:3000/api/v1/login   -H "Content-Type: application/json"   -d '{"email": "your_email", "password": "your_password"}'
 ```
 
 ## 👨‍💻 Developer
