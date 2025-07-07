@@ -29,9 +29,10 @@ Mart API คือ RESTful API ที่ใช้สำหรับจัดก�
 
    สร้างไฟล์ `.env` ใน root directory:
    ```env
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/your-db
-   JWT_SECRET=your_jwt_secret
+    DB_HOST=127.0.0.1
+    DB_PORT=27017
+    DB_NAME=db_name
+    JWT_SECRET=your_jwt_secret
    ```
 
 4. **Run server**
